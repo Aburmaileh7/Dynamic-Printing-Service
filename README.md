@@ -45,12 +45,24 @@ Each instance:
 
 
 
+---
 
-+-------------------+ +-------------------+
-| Client/API/DB | --> | Dynamic Printing |
-| JSON | | Service (DPS) |
-+-------------------+ +-------------------+
-|
-+-------------------------------+
-| Output (PDF / Print / API) |
-+-------------------------------+
+## ⚙️ System Requirements
+
+| Component         | Requirement                    |
+|------------------|--------------------------------|
+| OS               | Linux only (Ubuntu, Debian…)   |
+| Printing Engine  | CUPS (Common Unix Printing System) |
+| Node.js          | v14+ recommended               |
+| Required Modules | `carbone`, `express`, `iconv-lite`, `body-parser`, etc. |
+
+---
+
+## 🛠️ Installation & Setup (Sample)
+
+```bash
+# Install dependencies
+npm install express carbone iconv-lite body-parser
+
+# Start DPS instance
+node server.js
