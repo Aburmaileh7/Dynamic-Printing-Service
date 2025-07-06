@@ -1,0 +1,23 @@
+const express = require('express');
+const carbone = require('carbone');
+const fs = require('fs');
+const app = express();
+const port = 3000;
+
+app.use(express.json());
+
+app.post('/render', (req, res) => {
+  const data = req.body;
+  const templatePath = './templates/invoice.odt';
+
+  carbone.render(templatePath, data, (err, result) => {
+    if (err) return res.status(500).send(err);
+
+    res.setHeader('Content-Type', 'application/pdf');
+    res.send(result);
+  });
+});
+
+app.listen(port, () => {
+  console.log(`DPS running on port ${port}`);
+});
