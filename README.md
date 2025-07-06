@@ -43,3 +43,14 @@ Each instance:
 - **Printing Service** (CUPS integration)
 - **File System / Archiving**
 
+
+
+
++-------------------+ +-------------------+
+| Client/API/DB | --> | Dynamic Printing |
+| JSON | | Service (DPS) |
++-------------------+ +-------------------+
+|
++-------------------------------+
+| Output (PDF / Print / API) |
++-------------------------------+
